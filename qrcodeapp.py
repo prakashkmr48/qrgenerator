@@ -24,9 +24,10 @@ def main():
 
         # Display the image using st.image
         st.image(img_byte_array, caption="Generated QR Code", use_column_width=True)
-# Add a "Print QR Code" button
+
+        # Add a "Print QR Code" button
         if st.button("Print QR Code"):
-            st.markdown('<a href="javascript:window.print()" target="_blank">Print QR Code</a>')
+            st.markdown('<a href="javascript:window.print()" target="_blank">Print QR Code</a>', safe_allow_html=True)
 
 if __name__ == "__main__":
     main()
