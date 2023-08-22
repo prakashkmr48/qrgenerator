@@ -26,9 +26,13 @@ def main():
         st.image(img_byte_array, caption="Generated QR Code", use_column_width=True)
 
         # Add a "Print QR Code" button
-      <a href="javascript:window.print()">
-  <img src="print-icon.png" alt="Print">
-</a>
+     <button onclick="printPage()">Print</button>
+<script>
+  function printPage() {
+    window.print();
+  }
+</script>
+
 
 
 if __name__ == "__main__":
