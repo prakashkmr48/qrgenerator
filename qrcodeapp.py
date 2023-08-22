@@ -26,14 +26,7 @@ def main():
         st.image(img_byte_array, caption="Generated QR Code", use_column_width=True)
 
         # Add a "Print QR Code" button
- if st.button("Print QR Code"):
-            st.markdown(
-                f'<a href="{img_byte_array}" target="_blank" id="printLink">Open QR Code in New Tab</a>',
-                unsafe_allow_html=True,
-            )
-            st.write('<script>document.getElementById("printLink").click();</script>', unsafe_allow_html=True)
-
-
+st.markdown("**To print the QR code, click 'Ctrl+P' in your browser.**")
 
 if __name__ == "__main__":
     main()
