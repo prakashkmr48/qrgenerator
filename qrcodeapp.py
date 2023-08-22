@@ -26,11 +26,11 @@ def main():
         st.image(img_byte_array, caption="Generated QR Code", use_column_width=True)
 
         # Add a "Print QR Code" button
-     <button onclick="printPage()">Print</button>
+  <button id="printButton">Print</button>
 <script>
-  function printPage() {
+  document.getElementById("printButton").addEventListener("click", function() {
     window.print();
-  }
+  });
 </script>
 
 
