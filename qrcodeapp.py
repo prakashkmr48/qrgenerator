@@ -26,26 +26,12 @@ def main():
         st.image(img_byte_array, caption="Generated QR Code", use_column_width=True)
 
         # Add a "Print QR Code" button
-  <style>
-  #printButton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  #printButton:hover {
-    background-color: #0056b3;
-  }
-</style>
-<button id="printButton">Print</button>
-<script>
-  document.getElementById("printButton").addEventListener("click", function() {
-    window.print();
-  });
-</script>
-
+ if st.button("Print QR Code"):
+            st.markdown(
+                f'<a href="{img_byte_array}" target="_blank" id="printLink">Open QR Code in New Tab</a>',
+                unsafe_allow_html=True,
+            )
+            st.write('<script>document.getElementById("printLink").click();</script>', unsafe_allow_html=True)
 
 
 
