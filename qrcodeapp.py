@@ -1,4 +1,5 @@
 import streamlit as st
+pip install qrcode
 import qrcode
 from PIL import Image
 import io
