@@ -25,8 +25,13 @@ def main():
         # Display the image using st.image
         st.image(img_byte_array, caption="Generated QR Code", use_column_width=True)
 
-        # Add a "Print QR Code" button
-st.markdown("**To print the QR code, click 'Ctrl+P' in your browser.**")
+       
+        # Add vertical space
+        st.write(" ")  # Add an empty Markdown element for spacing
+
+        # Provide instructions to the user
+        st.markdown("**To print the QR code, click 'Ctrl+P' in your browser.**", unsafe_allow_html=True)
+
 
 if __name__ == "__main__":
     main()
